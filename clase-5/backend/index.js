@@ -23,6 +23,7 @@ const taskSchema = new mongoose.Schema({
   completed: { type: Boolean, default: false },
   createdAt: { type: Date, default: Date.now },
 });
+
 const Task = mongoose.model("Task", taskSchema);
 
 const userSchema = new mongoose.Schema({
@@ -30,6 +31,7 @@ const userSchema = new mongoose.Schema({
   passwordHash: { type: String, required: true },
   createdAt: { type: Date, default: Date.now },
 });
+
 const User = mongoose.model("User", userSchema);
 
 // --- Middleware ---

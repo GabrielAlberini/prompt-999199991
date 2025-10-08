@@ -1,6 +1,6 @@
 const BASE_URL = "http://localhost:3000/tasks"
 
-// 👉 Helper para obtener headers con token
+// 👉 Helper para obtener headers con token de autenticación
 const getAuthHeaders = () => {
   const token = localStorage.getItem("authToken")
   if (!token) throw new Error("No hay token de autenticación")
@@ -19,7 +19,7 @@ export const fetchTasksApi = async () => {
   return await res.json()
 }
 
-// ➕ Crear nueva tarea
+// ➕ Crear nueva tarea (sin validación, ya se hace en el componente)
 export const addTaskApi = async (text) => {
   const res = await fetch(BASE_URL, {
     method: "POST",
