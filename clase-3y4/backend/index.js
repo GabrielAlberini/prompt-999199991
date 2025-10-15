@@ -20,6 +20,7 @@ const writeTasks = (tasks) => {
   fs.writeFileSync(FILE, JSON.stringify(tasks, null, 2));
 };
 
+
 // Crear servidor
 const server = http.createServer((req, res) => {
   // CORS headers
